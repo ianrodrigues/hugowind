@@ -16,7 +16,7 @@
   <div class="px-4 py-8">
     <div class="mb-4">
       <p class="text-sm text-center leading-relaxed text-gray-500">
-        Thanks for reading and, if you enjoyed it, feel free to share{{ if isset .Site.Params "twitter" }} and, make sure you <a href="https://twitter.com/{{ .Site.Params.Twitter }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">follow me on Twitter</a> to get notified when I write a new post{{ end }}.
+        Thanks for reading and, if you enjoyed it, feel free to share. {{ if isset .Site.Params "twitter" }}And, make sure you <a href="https://twitter.com/{{ .Site.Params.Twitter }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">follow me on Twitter</a> to get notified when I write a new post{{ end }}.
       </p>
     </div>
 
@@ -40,7 +40,7 @@
   <div class="flex">
     <div class="w-1/2 text-left py-8 pr-8 border-r border-gray-200">
       {{ if .PrevInSection }}
-      <p class="text-md text-gray-500">Previous Post</p>
+      <p class="text-md text-gray-500">{{ i18n "previous_post" }}</p>
       <a href="{{ .PrevInSection.Permalink }}" class="font-sans text-2xl leading-snug text-gray-800 font-bold">
         {{ .PrevInSection.LinkTitle }}
       </a>
@@ -48,7 +48,7 @@
     </div>
     <div class="w-1/2 text-right py-8 pl-8">
       {{ if .NextInSection }}
-      <p class="text-md text-gray-500">Next Post</p>
+      <p class="text-md text-gray-500">{{ i18n "next_post" }}</p>
       <a href="{{ .NextInSection.Permalink }}" class="font-sans text-2xl leading-snug text-gray-800 font-bold">
         {{ .NextInSection.LinkTitle }}
       </a>

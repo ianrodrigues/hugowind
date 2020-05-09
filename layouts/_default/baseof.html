@@ -43,7 +43,7 @@
 <body class="antialiased font-serif">
   {{ if .IsHome }}
   <div class="hidden lg:block fixed bottom-4 md:bottom-8 left-4 md:left-8 z-50">
-    <a href="{{ .Site.BaseURL }}" class="block">
+    <a href="{{ .Site.BaseURL | relLangURL }}" class="block">
       <img class="w-24 h-24" src="{{ .Site.Params.Avatar | absURL }}" alt="{{ .Site.Params.Author }}" />
     </a>
   </div>

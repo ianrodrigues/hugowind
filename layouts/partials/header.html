@@ -8,17 +8,19 @@
   </p>
 
   <nav class="text-xl text-gray-500">
-    <a href="{{ .Site.BaseURL }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700">
+    <a href="{{ .Site.BaseURL | relLangURL }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700">
       Blog
     </a>
+    {{ with .Site.GetPage "uses.md" }}
     &nbsp;/&nbsp;
-    <a href="/uses" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700">
-      Uses
+    <a href="{{ .Permalink }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700">
+      {{ .LinkTitle }}
     </a>
+    {{ end }}
     {{ if isset .Site.Params "resume" }}
     &nbsp;/&nbsp;
     <a href="{{ .Site.Params.Resume | absURL }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">
-      Resume
+      {{ i18n "resume" }}
     </a>
     {{ end }}
     {{ if isset .Site.Params "twitter" }}
@@ -38,6 +40,14 @@
     <a href="https://www.linkedin.com/in/{{ .Site.Params.Linkedin }}/" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">
       LinkedIn
     </a>
+    {{ end }}
+    {{ if .IsTranslated }}
+    {{ range .Translations }}
+    &nbsp;/&nbsp;
+    <a href="{{ .Permalink }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700">
+      {{ .Language.LanguageName }}
+    </a>
+    {{ end}}
     {{ end }}
   </nav>
 </header>

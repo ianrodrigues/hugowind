@@ -1,0 +1,20 @@
+- id: resume
+  translation: Resume
+
+- id: read
+  translation: lectura
+
+- id: previous_post
+  translation: Post Anterior
+
+- id: next_post
+  translation: Seguiente Post
+
+- id: read_more
+  translation: Lea Mas
+
+- id: older_posts
+  translation: Posts Viejo
+
+- id: newer_posts
+  translation: Posts Recientes
