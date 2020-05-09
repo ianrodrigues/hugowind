@@ -16,7 +16,7 @@
   <div class="px-4 py-8">
     <div class="mb-4">
       <p class="text-sm text-center leading-relaxed text-gray-500">
-        Thanks for reading and, if you enjoyed it, feel free to share and, make sure you <a href="https://twitter.com/ianrdgs" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">follow me on Twitter</a> to get notified when I write a new post.
+        Thanks for reading and, if you enjoyed it, feel free to share{{ if isset .Site.Params "twitter" }} and, make sure you <a href="https://twitter.com/{{ .Site.Params.Twitter }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">follow me on Twitter</a> to get notified when I write a new post{{ end }}.
       </p>
     </div>
 

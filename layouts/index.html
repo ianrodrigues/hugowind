@@ -1,11 +1,3 @@
-{{ define "avatar" }}
-<div class="hidden lg:block fixed bottom-4 md:bottom-8 left-4 md:left-8 z-50">
-  <a href="/" class="block">
-    <img class="w-24 h-24" src="/images/ianrodrigues-avatar.png" alt="Ian Rodrigues Profile Picture" />
-  </a>
-</div>
-{{ end }}
-
 {{ define "content" }}
 <section class="m-4 md:mx-0 md:my-8">
   {{ $paginator := .Paginate (where .Site.RegularPages "Section" "posts").ByPublishDate.Reverse 1 }}

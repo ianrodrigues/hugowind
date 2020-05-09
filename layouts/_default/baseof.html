@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="{{ .Site.Params.LanguageCode }}">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 
   {{ hugo.Generator }}
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} @ {{ .Site.Title }}{{ end }}</title>
 
@@ -15,15 +15,18 @@
   <!-- Open-Graph Data -->
   {{ partial "open_graph.html" . }}
 
+  <meta name="author" content="{{ .Site.Params.Author }}" />
+  <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+
   <!-- RSS -->
   {{ with .OutputFormats.Get "RSS" }}
-  <link href="{{ .RelPermalink | absURL }}" type="application/rss+xml" title="{{ $.Site.Title }}" rel="alternate">
+  <link href="{{ .RelPermalink | absURL }}" type="application/rss+xml" title="{{ $.Site.Title }}" rel="alternate" />
   {{ end }}
 
   <!-- Translations -->
   {{ if .IsTranslated }}
   {{ range .Translations }}
-  <link href="{{ .Permalink }}" title="{{ .Site.Title }}" hreflang="{{ .Language.Lang }}" rel="alternate">
+  <link href="{{ .Permalink }}" title="{{ .Site.Title }}" hreflang="{{ .Language.Lang }}" rel="alternate" />
   {{ end }}
   {{ end }}
 
@@ -38,7 +41,13 @@
   {{ partial "scripts.html" . }}
 </head>
 <body class="antialiased font-serif">
-  {{ block "avatar" . }}{{ end }}
+  {{ if .IsHome }}
+  <div class="hidden lg:block fixed bottom-4 md:bottom-8 left-4 md:left-8 z-50">
+    <a href="{{ .Site.BaseURL }}" class="block">
+      <img class="w-24 h-24" src="{{ .Site.Params.Avatar | absURL }}" alt="{{ .Site.Params.Author }}" />
+    </a>
+  </div>
+  {{ end }}
 
   <main class="sm:max-w-xl md:max-w-2xl sm:mx-auto">
     {{ partial "header.html" . }}
