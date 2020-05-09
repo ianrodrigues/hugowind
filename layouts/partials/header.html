@@ -8,45 +8,32 @@
   </p>
 
   <nav class="text-xl text-gray-500">
-    <a href="{{ .Site.BaseURL | relLangURL }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700">
-      Blog
-    </a>
+    <a href="{{ .Site.BaseURL | relLangURL }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700">Blog</a>
     {{ with .Site.GetPage "uses.md" }}
     &nbsp;/&nbsp;
-    <a href="{{ .Permalink }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700">
-      {{ .LinkTitle }}
-    </a>
+    <a href="{{ .Permalink }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700">{{ .LinkTitle }}</a>
     {{ end }}
     {{ if isset .Site.Params "resume" }}
     &nbsp;/&nbsp;
-    <a href="{{ .Site.Params.Resume | absURL }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">
-      {{ i18n "resume" }}
-    </a>
+    <a href="{{ .Site.Params.Resume | absURL }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">{{ i18n "resume" }}</a>
     {{ end }}
     {{ if isset .Site.Params "twitter" }}
     &nbsp;/&nbsp;
-    <a href="https://twitter.com/{{ .Site.Params.Twitter }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">
-      Twitter
-    </a>
+    <a href="https://twitter.com/{{ .Site.Params.Twitter }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">Twitter</a>
     {{ end }}
     {{ if isset .Site.Params "github" }}
     &nbsp;/&nbsp;
-    <a href="https://github.com/{{ .Site.Params.Github }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">
-      GitHub
+    <a href="https://github.com/{{ .Site.Params.Github }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">GitHub
     </a>
     {{ end }}
     {{ if isset .Site.Params "linkedin" }}
     &nbsp;/&nbsp;
-    <a href="https://www.linkedin.com/in/{{ .Site.Params.Linkedin }}/" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">
-      LinkedIn
-    </a>
+    <a href="https://www.linkedin.com/in/{{ .Site.Params.Linkedin }}/" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">LinkedIn</a>
     {{ end }}
     {{ if .IsTranslated }}
     {{ range .Translations }}
     &nbsp;/&nbsp;
-    <a href="{{ .Permalink }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700">
-      {{ .Language.LanguageName }}
-    </a>
+    <a href="{{ .Permalink }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700">{{ .Language.LanguageName }}</a>
     {{ end}}
     {{ end }}
   </nav>
