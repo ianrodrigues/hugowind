@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "serve": "cross-env NODE_ENV=development concurrently \"postcss resources/css/theme.css -o static/css/theme.css --watch\"  \"live-server ./public\"",
-    "development": "cross-env NODE_ENV=development postcss resources/css/theme.css -o static/css/theme.css",
-    "production": "cross-env NODE_ENV=production postcss resources/css/theme.css -o static/css/theme.css",
+    "serve": "cross-env NODE_ENV=development concurrently \"postcss resources/css/theme.css -o static/css/theme.min.css --watch\"  \"live-server ./public\"",
+    "development": "cross-env NODE_ENV=development postcss resources/css/theme.css -o static/css/theme.min.css",
+    "production": "cross-env NODE_ENV=production postcss resources/css/theme.css -o static/css/theme.min.css",
     "start": "npm run serve"
   },
   "dependencies": {

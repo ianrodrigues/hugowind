@@ -2,35 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* purgecss ignore */
 article > * {
   @apply .text-lg .mb-6
 }
 
+/* purgecss ignore */
 article > *:last-child {
   @apply .mb-0
 }
 
+/* purgecss ignore */
 article > p > a {
   @apply .text-indigo-500 .border-b-2 .border-indigo-500 .transition .duration-200 .ease-in-out .transform
 }
 
+/* purgecss ignore */
 article > p > a:focus,
 article > p > a:hover {
   @apply .text-indigo-700 .border-indigo-700
 }
 
+/* purgecss ignore */
 article > p > code {
   @apply .p-1 .border .border-gray-100 .bg-gray-50
 }
 
+/* purgecss ignore */
 article > .highlight > .chroma {
-  @apply .p-4 .text-sm .overflow-x-scroll .font-mono
+  @apply .p-4 .overflow-x-scroll .font-mono
 }
 
+/* purgecss ignore */
 article > ul {
   @apply .list-disc .list-inside
 }
 
+/* purgecss ignore */
 article > h3 {
   @apply .font-sans .font-bold .text-2xl .leading-snug .text-gray-800 .inline-block .border-t-4 .border-indigo-500 .mt-8
 }
