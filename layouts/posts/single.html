@@ -1,13 +1,13 @@
 {{ define "content" }}
 <section class="m-4 md:mx-0 md:my-8">
-  <div>
-    <h2 class="my-2 font-sans text-5xl leading-tight font-bold text-gray-800">
+  <div class="my-2">
+    {{ partial "post_meta.html" . }}
+    <h2 class="font-sans text-5xl leading-tight font-bold text-gray-800">
       {{ .Title }}
     </h2>
-    {{ partial "post_meta.html" . }}
   </div>
 
-  <article class="my-8 leading-relaxed text-gray-600">
+  <article class="my-8 leading-relaxed text-gray-600 break-words">
     {{ .Content }}
   </article>
 </section>

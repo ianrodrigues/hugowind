@@ -13,13 +13,13 @@ article > *:last-child {
 }
 
 /* purgecss ignore */
-article > p > a {
+article a {
   @apply .text-blue-500 .border-b-2 .border-blue-500 .transition .duration-200 .ease-in-out .transform
 }
 
 /* purgecss ignore */
-article > p > a:focus,
-article > p > a:hover {
+article a:focus,
+article a:hover {
   @apply .text-blue-700 .border-blue-700
 }
 

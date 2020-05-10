@@ -3,12 +3,12 @@
   {{ $paginator := .Paginate (where .Site.RegularPages "Section" "posts").ByPublishDate.Reverse }}
   {{ range $paginator.Pages }}
   <div class="mb-16">
+    {{ partial "post_meta.html" . }}
     <div class="my-2">
       <a href="{{ .Permalink }}" class="font-sans text-3xl leading-tight font-bold text-gray-800 transition duration-200 ease-in-out transform focus:text-orange-500 hover:text-orange-500">
         {{ .LinkTitle }}
       </a>
     </div>
-    {{ partial "post_meta.html" . }}
 
     <div class="my-6 text-lg leading-relaxed text-gray-600">
       <p>{{ .Summary }}</p>
