@@ -16,7 +16,7 @@
   {{ partial "open_graph.html" . }}
 
   <meta name="author" content="{{ .Site.Params.Author }}" />
-  <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+  <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 
   <!-- RSS -->
   {{ with .OutputFormats.Get "RSS" }}
@@ -29,6 +29,9 @@
   <link href="{{ .Permalink }}" title="{{ .Site.Title }}" hreflang="{{ .Language.Lang }}" rel="alternate" />
   {{ end }}
   {{ end }}
+
+  <!-- Favicons -->
+  {{ partial "favicons.html" . }}
 
   <!-- Stylesheets -->
   {{ partial "stylesheets.html" . }}
