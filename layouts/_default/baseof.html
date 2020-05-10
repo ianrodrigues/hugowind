@@ -36,16 +36,8 @@
   <!-- JavaScript -->
   {{ partial "scripts.html" . }}
 </head>
-<body class="antialiased font-serif">
-  {{ if .IsHome }}
-  <div class="hidden lg:block fixed bottom-4 md:bottom-8 left-4 md:left-8 z-50">
-    <a href="{{ .Site.BaseURL | relLangURL }}" class="block">
-      <img class="w-24 h-24" src="{{ .Site.Params.Avatar | absURL }}" alt="{{ .Site.Params.Author }}" />
-    </a>
-  </div>
-  {{ end }}
-
-  <main class="sm:max-w-xl md:max-w-2xl sm:mx-auto">
+<body class="bg-gray-50 border-t-4 border-orange-500 antialiased font-serif">
+  <main class="sm:max-w-xl md:max-w-2xl lg:max-w-3xl sm:mx-auto">
     {{ partial "header.html" . }}
 
     {{ block "content" . }}{{ end }}

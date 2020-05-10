@@ -1,6 +1,6 @@
 {{ define "content" }}
 <section class="m-4 md:mx-0 md:my-8">
-  <div class="border-t-8 border-blue-500">
+  <div class="border-t-4 border-orange-500">
     <h2 class="my-2 font-sans text-5xl leading-tight font-bold text-gray-800">
       {{ .Title }}
     </h2>
@@ -41,7 +41,7 @@
     <div class="w-1/2 text-left py-8 pr-8 border-r border-gray-200">
       {{ if .PrevInSection }}
       <p class="text-md text-gray-500">{{ i18n "previous_post" }}</p>
-      <a href="{{ .PrevInSection.Permalink }}" class="font-sans text-2xl leading-snug text-gray-800 font-bold">
+      <a href="{{ .PrevInSection.Permalink }}" class="font-sans text-2xl leading-snug text-gray-800 font-bold transition duration-200 ease-in-out transform focus:text-orange-500 hover:text-orange-500">
         {{ .PrevInSection.LinkTitle }}
       </a>
       {{ end }}
@@ -49,7 +49,7 @@
     <div class="w-1/2 text-right py-8 pl-8">
       {{ if .NextInSection }}
       <p class="text-md text-gray-500">{{ i18n "next_post" }}</p>
-      <a href="{{ .NextInSection.Permalink }}" class="font-sans text-2xl leading-snug text-gray-800 font-bold">
+      <a href="{{ .NextInSection.Permalink }}" class="font-sans text-2xl leading-snug text-gray-800 font-bold transition duration-200 ease-in-out transform focus:text-orange-500 hover:text-orange-500">
         {{ .NextInSection.LinkTitle }}
       </a>
       {{ end }}

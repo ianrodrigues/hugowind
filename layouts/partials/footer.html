@@ -1,6 +1,21 @@
 <footer>
-  <div class="my-16 text-center text-sm leading-relaxed text-gray-600">
-    <p class="mb-2">&copy; {{ .Site.Title }}</p>
+  <div class="mt-16 mb-8 text-center text-sm leading-relaxed text-gray-600">
+    <nav class="mb-6 text-xl text-gray-500">
+      {{ if isset .Site.Params "twitter" }}
+      <a href="https://twitter.com/{{ .Site.Params.Twitter }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">Twitter</a>
+      {{ end }}
+      {{ if isset .Site.Params "github" }}
+      &nbsp;/&nbsp;
+      <a href="https://github.com/{{ .Site.Params.Github }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">GitHub</a>
+      {{ end }}
+      {{ if isset .Site.Params "linkedin" }}
+      &nbsp;/&nbsp;
+      <a href="https://www.linkedin.com/in/{{ .Site.Params.Linkedin }}/" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">LinkedIn</a>
+      {{ end }}
+    </nav>
+    
+    <p class="mb-2">&copy; {{ now.Format "2006"}} {{ .Site.Title }}.</p>
+    
     <p>Made with ❤️ with <a href="https://tailwindcss.com/" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">Tailwind</a> and <a href="https://gohugo.io/" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-700 focus:border-blue-700 hover:text-blue-700 hover:border-blue-700" target="_blank">Hugo</a>.</p>
   </div>
 </footer>
