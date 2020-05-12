@@ -21,3 +21,12 @@
 
 - id: newer_posts
   translation: Posts Recientes
+
+- id: thanks_for_reading
+  translation: Gracias por leer y, si lo has disfrutado, no dudes en compartirlo.
+
+- id: share_on_twitter
+  translation: Compartir en Twitter
+
+- id: share_on_linkedin
+  translation: Compartir en LinkedIn

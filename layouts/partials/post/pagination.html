@@ -1,0 +1,17 @@
+<section class="m-4 md:mx-0 md:my-8 border-t border-b border-cool-gray-100 break-words">
+  <div class="flex">
+    <div class="w-1/2 text-left py-8 pr-8 border-r border-cool-gray-200">
+      {{ if .PrevInSection }}
+      <p class="text-md text-cool-gray-500">{{ i18n "previous_post" }}</p>
+      <a href="{{ .PrevInSection.Permalink }}" class="font-sans text-2xl leading-snug text-cool-gray-800 font-bold transition duration-200 ease-in-out transform focus:text-orange-500 hover:text-orange-500">{{ .PrevInSection.LinkTitle }}</a>
+      {{ end }}
+    </div>
+
+    <div class="w-1/2 text-right py-8 pl-8">
+      {{ if .NextInSection }}
+      <p class="text-md text-cool-gray-500">{{ i18n "next_post" }}</p>
+      <a href="{{ .NextInSection.Permalink }}" class="font-sans text-2xl leading-snug text-cool-gray-800 font-bold transition duration-200 ease-in-out transform focus:text-orange-500 hover:text-orange-500">{{ .NextInSection.LinkTitle }}</a>
+      {{ end }}
+    </div>
+  </div>
+</section>
