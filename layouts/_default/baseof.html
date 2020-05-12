@@ -10,10 +10,10 @@
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} @ {{ .Site.Title }}{{ end }}</title>
 
   <!-- Twitter Card -->
-  {{ partial "twitter_card.html" . }}
+  {{ partial "head/twitter_card.html" . }}
 
   <!-- Open-Graph Data -->
-  {{ partial "open_graph.html" . }}
+  {{ partial "head/open_graph.html" . }}
 
   <meta name="author" content="{{ .Site.Params.Author }}" />
   <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
@@ -31,21 +31,21 @@
   {{ end }}
 
   <!-- Favicons -->
-  {{ partial "favicons.html" . }}
+  {{ partial "head/favicons.html" . }}
 
   <!-- Stylesheets -->
-  {{ partial "stylesheets.html" . }}
+  {{ partial "head/stylesheets.html" . }}
 
   <!-- JavaScript -->
-  {{ partial "scripts.html" . }}
+  {{ partial "head/scripts.html" . }}
 </head>
 <body class="bg-cool-gray-50 border-t-4 border-orange-500 antialiased font-body">
   <main class="sm:max-w-xl md:max-w-2xl lg:max-w-3xl sm:mx-auto">
-    {{ partial "header.html" . }}
+    {{ partial "page/header.html" . }}
 
     {{ block "content" . }}{{ end }}
 
-    {{ partial "footer.html" . }}
+    {{ partial "page/footer.html" . }}
   </main>
 
   {{ template "_internal/google_analytics.html" . }}

@@ -1,0 +1,8 @@
+<p>
+  {{ range .Params.Tags }}
+  {{ $name := . }}
+  {{ with $.Site.GetPage (printf "/%s/%s" "tags" ($name | urlize)) }}
+    <a href="{{ .Permalink }}" class="text-blue-500 transition duration-200 ease-in-out transform focus:text-blue-400 hover:text-blue-400">#{{ $name }}</a>
+  {{ end }}
+  {{ end }}
+</p>

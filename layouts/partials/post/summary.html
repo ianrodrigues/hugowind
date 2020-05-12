@@ -1,0 +1,15 @@
+<div class="mb-16">
+  {{ if eq .Kind "page" }}
+  {{ partial "post/meta.html" . }}
+  {{ end }}
+  <div class="my-2">
+    <a href="{{ .Permalink }}" class="font-sans text-3xl leading-tight font-bold text-cool-gray-800 transition duration-200 ease-in-out transform focus:text-orange-500 hover:text-orange-500">{{ .LinkTitle }}</a>
+  </div>
+  {{ if eq .Kind "page" }}
+  {{ partial "post/tags.html" . }}
+  {{ end }}
+
+  <div class="my-6 text-lg leading-relaxed text-cool-gray-600">
+    <p>{{ .Summary }}</p>
+  </div>
+</div>

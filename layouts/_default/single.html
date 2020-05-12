@@ -1,13 +1,18 @@
 {{ define "content" }}
 <section class="m-4 md:mx-0 md:my-8">
-  <div class="mb-6">
-    <h2 class="my-2 font-sans text-5xl leading-tight font-bold text-cool-gray-800">
-      {{ .Title }}
-    </h2>
+  <div class="mb-6 break-words">
+    {{ partial "post/meta.html" . }}
+    <h2 class="font-sans text-5xl leading-tight font-bold text-cool-gray-800">{{ .Title }} - {{ .Type }}</h2>
   </div>
 
-  <article class="leading-relaxed text-cool-gray-600">
-    {{ .Content }}
-  </article>
+  {{ partial "page/content.html" . }}
+</section>
+
+{{ partial "post/social_shares.html" . }}
+
+{{ partial "post/pagination.html" . }}
+
+<section class="m-4 md:mx-0 md:my-8">
+  {{ template "_internal/disqus.html" . }}
 </section>
 {{ end }}
