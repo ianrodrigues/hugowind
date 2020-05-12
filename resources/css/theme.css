@@ -3,8 +3,23 @@
 @tailwind utilities;
 
 /* purgecss ignore */
+::selection {
+  @apply bg-orange-200;
+}
+
+/* purgecss ignore */
+::-moz-selection {
+  @apply bg-orange-200;
+}
+
+/* purgecss ignore */
+article {
+  @apply text-lg;
+}
+
+/* purgecss ignore */
 article > * {
-  @apply text-lg mb-6;
+  @apply my-8;
 }
 
 /* purgecss ignore */
@@ -13,50 +28,87 @@ article > *:last-child {
 }
 
 /* purgecss ignore */
+article > h1,
+article > h2,
+article > h3,
+article > h4,
+article > h5,
+article > h6 {
+  @apply font-sans font-bold text-cool-gray-800 leading-tight;
+}
+
+/* purgecss ignore */
+article > h1 {
+  @apply text-5xl;
+}
+
+/* purgecss ignore */
+article > h2 {
+  @apply text-4xl;
+}
+
+/* purgecss ignore */
+article > h3 {
+  @apply text-3xl;
+}
+
+/* purgecss ignore */
+article > h4 {
+  @apply text-2xl;
+}
+
+/* purgecss ignore */
+article > h5 {
+  @apply text-xl;
+}
+
+/* purgecss ignore */
 article a {
-  @apply text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform;
+  @apply text-blue-600 transition duration-200 ease-in-out transform;
 }
 
 /* purgecss ignore */
 article a:focus,
 article a:hover {
-  @apply text-blue-700 border-blue-700;
+  @apply text-blue-400;
 }
 
 /* purgecss ignore */
 article > p > code {
-  @apply p-1 border border-white bg-gray-100;
+  @apply p-1 border border-cool-gray-200 bg-cool-gray-100;
 }
 
 /* purgecss ignore */
 article > .highlight > .chroma {
-  @apply p-6 bg-gray-100 font-mono overflow-x-auto;
+  @apply p-6 bg-cool-gray-100 font-mono overflow-x-auto border border-cool-gray-200;
 }
 
 /* purgecss ignore */
-article > ul {
-  @apply list-disc list-inside;
+hr {
+  @apply border border-cool-gray-200;
 }
 
 /* purgecss ignore */
-article > h3,
-article > h4,
-article > h5,
-article > h6 {
-  @apply font-sans font-bold leading-tight;
+ul {
+  @apply list-square;
 }
 
 /* purgecss ignore */
-article > h3 {
-  @apply text-2xl inline-block border-t-4 border-orange-500 mt-8 py-1;
+article > blockquote {
+  @apply border-l-4 mx-4 px-4;
 }
 
 /* purgecss ignore */
-article > h4 {
-  @apply text-xl;
+article > table {
+  @apply text-left border-collapse;
 }
 
 /* purgecss ignore */
-article > h5 {
-  @apply text-lg;
+article > table > thead > tr > th {
+  @apply py-2 px-4 bg-cool-gray-200 font-bold border border-cool-gray-50;
+}
+
+/* purgecss ignore */
+article > table > tbody > tr > td {
+  @apply py-2 px-4 border border-cool-gray-200;
 }
