@@ -7,20 +7,20 @@
     {{ .Site.Params.Tagline }}
   </p>
 
-  <nav class="text-xl text-cool-gray-500">
-    <a href="{{ .Site.BaseURL | relLangURL }}" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400">{{ i18n "writings" }}</a>
-    {{ with .Site.GetPage "uses.md" }}
+  <nav class="text-xl leading-relaxed text-cool-gray-500">
+    <a href="{{ .Site.BaseURL | relLangURL }}" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" rel="prefetch">{{ i18n "writings" }}</a>
+
+    {{ $baseUrl := trim .Site.BaseURL "/" }}
+    {{ range .Site.Menus.main }}
+    {{ $url := trim .URL "/" | absURL }}
     &nbsp;/&nbsp;
-    <a href="{{ .Permalink }}" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400">{{ .LinkTitle }}</a>
+    <a href="{{ $url }}" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" {{ if or (.Page) (hasPrefix $url $baseUrl) }}rel="prefetch"{{else}}target="_blank"{{ end }}>{{ .Name }}</a>
     {{ end }}
-    {{ if isset .Site.Params "resume" }}
-    &nbsp;/&nbsp;
-    <a href="{{ .Site.Params.Resume | absURL }}" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" target="_blank">{{ i18n "resume" }}</a>
-    {{ end }}
+
     {{ if .IsTranslated }}
     {{ range .Translations }}
     &nbsp;/&nbsp;
-    <a href="{{ .Permalink }}" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400">{{ .Language.LanguageName }}</a>
+    <a href="{{ .Permalink }}" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" rel="prefetch">{{ .Language.LanguageName }}</a>
     {{ end}}
     {{ end }}
   </nav>
