@@ -1,16 +1,16 @@
 <footer>
   <div class="mt-16 mb-8 text-center text-sm leading-relaxed text-cool-gray-600">
     <nav class="mb-6 text-xl text-cool-gray-500">
-      {{ if isset .Site.Params "twitter" }}
-      <a href="https://twitter.com/{{ .Site.Params.Twitter }}" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" target="_blank">Twitter</a>
+      {{ with .Site.Params.twitter }}
+      <a href="https://twitter.com/{{ . }}" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" target="_blank">Twitter</a>
       {{ end }}
-      {{ if isset .Site.Params "github" }}
+      {{ with .Site.Params.github }}
       &nbsp;/&nbsp;
-      <a href="https://github.com/{{ .Site.Params.Github }}" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" target="_blank">GitHub</a>
+      <a href="https://github.com/{{ . }}" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" target="_blank">GitHub</a>
       {{ end }}
-      {{ if isset .Site.Params "linkedin" }}
+      {{ with .Site.Params.linkedin }}
       &nbsp;/&nbsp;
-      <a href="https://www.linkedin.com/in/{{ .Site.Params.Linkedin }}/" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/{{ . }}/" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" target="_blank">LinkedIn</a>
       {{ end }}
     </nav>
     

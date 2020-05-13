@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ .Site.Params.LanguageCode }}">
+<html lang="{{ .Site.Params.languageCode }}">
 <head>
   <meta charset="utf-8" />
 
@@ -15,12 +15,12 @@
   <!-- Open-Graph Data -->
   {{ partial "head/open_graph.html" . }}
 
-  <meta name="author" content="{{ .Site.Params.Author }}" />
-  <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+  <meta name="author" content="{{ .Site.Params.author }}" />
+  <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 
   <!-- RSS -->
   {{ with .OutputFormats.Get "RSS" }}
-  <link href="{{ .RelPermalink | absURL }}" type="application/rss+xml" title="{{ $.Site.Title }}" rel="alternate" />
+  <link href="{{ .Permalink }}" type="application/rss+xml" title="{{ $.Site.Title }}" rel="alternate" />
   {{ end }}
 
   <!-- Translations -->
