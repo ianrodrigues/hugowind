@@ -3,6 +3,7 @@
   <div class="mb-6 break-words">
     {{ partial "post/meta.html" . }}
     <h2 class="font-sans text-5xl leading-tight font-bold text-cool-gray-800">{{ .Title }}</h2>
+    {{ partial "post/tags.html" . }}
   </div>
 
   {{ partial "page/content.html" . }}
