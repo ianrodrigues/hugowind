@@ -8,19 +8,19 @@
   </p>
 
   <nav class="text-xl leading-relaxed text-cool-gray-500">
-    <a href="{{ .Site.BaseURL | relLangURL }}" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" rel="prefetch">{{ i18n "writings" }}</a>
+    <a href="{{ .Site.BaseURL | relLangURL }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" rel="prefetch">{{ i18n "writings" }}</a>
 
     {{ $baseUrl := trim .Site.BaseURL "/" }}
     {{ range .Site.Menus.main }}
     {{ $url := trim .URL "/" | absURL }}
     &nbsp;/&nbsp;
-    <a href="{{ $url }}" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" {{ if or (.Page) (hasPrefix $url $baseUrl) }}rel="prefetch"{{else}}target="_blank"{{ end }}>{{ .Name }}</a>
+    <a href="{{ $url }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" {{ if or (.Page) (hasPrefix $url $baseUrl) }}rel="prefetch"{{else}}target="_blank"{{ end }}>{{ .Name }}</a>
     {{ end }}
 
     {{ if .IsTranslated }}
     {{ range .Translations }}
     &nbsp;/&nbsp;
-    <a href="{{ .Permalink }}" class="text-blue-600 border-b-2 border-blue-600 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" rel="prefetch">{{ .Language.LanguageName }}</a>
+    <a href="{{ .Permalink }}" class="text-blue-500 border-b-2 border-blue-500 transition duration-200 ease-in-out transform focus:text-blue-400 focus:border-blue-400 hover:text-blue-400 hover:border-blue-400" rel="prefetch">{{ .Language.LanguageName }}</a>
     {{ end}}
     {{ end }}
   </nav>

@@ -69,7 +69,7 @@ article > h5 {
 
 /* purgecss ignore */
 article a {
-  @apply text-blue-600 transition duration-200 ease-in-out transform;
+  @apply text-blue-500 transition duration-200 ease-in-out transform;
 }
 
 /* purgecss ignore */
