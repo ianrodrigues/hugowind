@@ -1,8 +1,8 @@
-name = "Tailwind Simple Blog"
+name = "Hugowind"
 license = "MIT"
-licenselink = "https://github.com/ianrodrigues/tailwind-simple-blog/blob/master/license.md"
+licenselink = "https://github.com/ianrodrigues/hugowind/blob/master/LICENSE"
 description = "A minimalist theme for Hugo using Tailwind CSS."
-homepage = "https://github.com/ianrodrigues/hugo-tailwind-journal"
+homepage = "https://github.com/ianrodrigues/hugowind"
 tags = ["minimalist", "reading", "blog", "tailwindcss"]
 features = ["blog"]
 min_version = "0.54.0"
