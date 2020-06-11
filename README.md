@@ -1,10 +1,10 @@
-# Tailwind Simple Blog
+# Hugowind
 
-_Tailwind Simple Blog_ is a minimalist theme for [Hugo](https://gohugo.io) using [Tailwind CSS](https://tailwindcss.com).
+_Hugowind_ is a minimalist theme for [Hugo](https://gohugo.io) using [Tailwind CSS](https://tailwindcss.com).
 
 It uses [Chroma](https://gohugo.io/content-management/syntax-highlighting/) for the syntaxic coloration of code snippets.
 
-Demo is available [here](https://ianrodrigues.github.io/hugowind-demo/).
+Demo is available [here](https://vibrant-hopper-92ee84.netlify.app/).
 
 ## Installation
 
