@@ -1,6 +1,6 @@
 {{ define "content" }}
 <section class="m-4 md:mx-0 md:my-8">
-  {{ range .Paginator.Pages }}
+  {{ range where site.RegularPages "Type" "in" site.Params.mainSections }}
   {{ partial "post/summary.html" . }}
   {{ end }}
 </section>
