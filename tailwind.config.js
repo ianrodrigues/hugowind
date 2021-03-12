@@ -9,6 +9,7 @@ module.exports = {
     },
     listStyleType: {
       square: "square",
+      decimal: "decimal",
     },
     extend: {},
   },
